@@ -8,7 +8,8 @@ const StoreContextProvider = (props)=>{
 
 
     const [cartItems, setCartItems] = useState({})
-    const url = "http://localhost:4000";
+    // const url = "http://localhost:4000";
+    const url = "https://mangiamo-backend.onrender.com";
     const [token, setToken] = useState("");
 
 
