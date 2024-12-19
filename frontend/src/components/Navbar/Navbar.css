@@ -52,9 +52,7 @@ align-items: center;
     right: -8px;
 }
 @media (max-width:1050px ){
-    .navbar .logo{
-        width: 140px;
-    }
+   
     .navbar-menu{
         gap: 20px;
         font-size: 17px;
