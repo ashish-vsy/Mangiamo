@@ -1,20 +1,18 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export const connectDB = async () => {
-  try {
-    // Adding the database name after the '/' in the URI (replace 'yourDatabase' with the actual DB name you want to connect to)
-    const uri = 'mongodb+srv://ashishkrobo:ashish123@cluster0.sgksj.mongodb.net/yourDatabase?retryWrites=true&w=majority&appName=Cluster0';
-
-    // Connecting to MongoDB using Mongoose
-    await mongoose.connect(uri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      // SSL should be enabled by default with mongodb+srv, but you can explicitly specify it if needed
-      ssl: true
-    });
-
-    console.log("DB connected");
-  } catch (error) {
-    console.error("Error connecting to MongoDB:", error);
-  }
+    try {
+        const uri = process.env.MONGO_URI;
+        if (!uri) {
+            throw new Error("MONGO_URI is not defined in the environment variables");
+        }
+        await mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+        console.log("DB connected");
+    } catch (error) {
+        console.error("DB connection failed:", error.message);
+        process.exit(1); 
+    }
 };
