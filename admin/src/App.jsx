@@ -9,8 +9,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
 
-// const url = "https://mangiamo-backend.onrender.com";
-const url = "http://localhost:4000";
+const url = "https://mangiamo-backend.onrender.com";
+// const url = "http://localhost:4000";
 
   return (
     <div>
