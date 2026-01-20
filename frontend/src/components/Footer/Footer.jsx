@@ -28,13 +28,13 @@ const Footer = () => {
             <div className="footer-content-right">
                     <h2>GET IN TOUCH</h2>
                     <ul>
-                       <li>+91 123 123 4567</li>
-                       <li>cantact@ashish.com</li> 
+                       <li>+91 6387477172</li>
+                       <li>ashishxvsy@gmail.com</li> 
                     </ul>
             </div>
         </div>
         <hr />
-        <p className="footer-copyright">Copyright 2024 © mangiamo.com - All Right Reserved. </p>
+        <p className="footer-copyright">`Copyright {new Date().getFullYear()} © mangiamo.com - All Right Reserved. `</p>
     </div>
   )
 }
